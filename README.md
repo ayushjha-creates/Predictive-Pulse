@@ -49,21 +49,3 @@ predictive-pulse/
 ├── cleaned_dataset.csv         # Processed data used for training
 ├── patient_data.csv            # Original raw dataset
 └── README.md                   # Project documentation
-# How to Run Locally
-1. Clone the repository
-
-Bash
-
-git clone https://github.com/yourusername/predictive-pulse.git
-cd predictive-pulse
-2. Install required dependencies
-Make sure you have Python installed, then run:
-
-Bash
-
-pip install pandas numpy scikit-learn flask matplotlib seaborn
-3. Run the Flask Application
-
-Bash
-
-python app.py
