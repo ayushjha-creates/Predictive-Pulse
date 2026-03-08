@@ -34,21 +34,37 @@ Model Evaluation: Tested multiple algorithms (Logistic Regression, Decision Tree
 Advanced Ensembling: Deployed an optimized ensemble model (Gradient Boosting / Random Forest) using GridSearchCV and Stratified K-Fold Cross-Validation to handle complex, overlapping medical symptoms effectively.
 
 # Project Structure
-Plaintext
-
-predictive-pulse/
+Predictive Pulse/
+├── app.py                    # Flask web application
+├── requirements.txt         # Python dependencies
+├── Procfile                  # Deployment config (Heroku/Render)
+├── README.md                 # Project documentation
 │
-├── static/
-│   └── style.css               # Frontend styling
+├── dataset/                  # Data files
+│   ├── patient_data.csv
+│   ├── cleaned_dataset.csv
+│   ├── cleaned_patient_data.csv
+│   ├── age_vs_stage.png
+│   ├── correlation_heatmap.png
+│   ├── gender_distribution.png
+│   ├── medication_vs_severity.png
+│   ├── pairplot.png
+│   └── stages_distribution.png
 │
-├── templates/
-│   └── index.html              # Web application interface
+├── model/                    # ML model
+│   ├── model.ipynb           # Training notebook
+│   ├── pro_model_pipeline.pkl # Trained model
+│   └── pro_model_evaluation.png
 │
-├── app.py                      # Flask backend and API routing
-├── pro_model_pipeline.pkl      # Saved ML model & scaler 
-├── cleaned_dataset.csv         # Processed data used for training
-├── patient_data.csv            # Original raw dataset
-└── README.md                   # Project documentation
+├── notebooks/               # Jupyter notebooks
+│   ├── EDA.ipynb
+│   └── cleaning.ipynb
+│
+├── static/                  # CSS
+│   └── style.css
+│
+└── templates/               # HTML templates
+    └── index.html
 
 # Deployment
 
