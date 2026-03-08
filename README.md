@@ -152,12 +152,6 @@ The application is live on Vercel at:
 
 ---
 
-## License
-
-This project is available under the MIT License.
-
----
-
 ## Author
 
 **Ayush Jha**
