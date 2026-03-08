@@ -49,3 +49,54 @@ predictive-pulse/
 ├── cleaned_dataset.csv         # Processed data used for training
 ├── patient_data.csv            # Original raw dataset
 └── README.md                   # Project documentation
+
+# Deployment
+
+The application is deployed on **Vercel** and can be accessed at:
+
+**Live URL:** https://predictive-pulse.vercel.app/
+
+## Deployment Steps
+
+1. **Install Vercel CLI:**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Login to Vercel:**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy:**
+   ```bash
+   vercel
+   ```
+
+4. **For production deployment:**
+   ```bash
+   vercel --prod
+   ```
+
+## Note for Vercel Deployment
+
+Since this is a Flask application, Vercel requires a `vercel.json` configuration file to properly route requests to the Flask app. The following configuration is already included in the project:
+
+```json
+{
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app.py"
+    }
+  ]
+}
+```
+
+The app will automatically detect and use the `app:app` Flask application object.
